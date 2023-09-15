@@ -1,4 +1,4 @@
-// addToCart.js
+
 
 export default {
     mounted (el, binding) {
@@ -20,12 +20,12 @@ export default {
             } else item.choosedOptions = []
 
             if(totalPrice <= 0) {
-                store.dispatch('addNotification', "You can't add zero-priced item to your cart.")
+                store.dispatch('addNotification', "Вы не можете добавить товар с нулевой ценой в свою корзину.")
                 return
             } else {
                 item.totalPrice = totalPrice
                 store.dispatch('addToCart', item)
-                store.dispatch('addNotification', "You added item(s) to your cart.")
+                store.dispatch('addNotification', "Вы добавили товар в корзину")
             }
         });
     }

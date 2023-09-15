@@ -46,7 +46,7 @@
                         <div class="btn-group">
                             <button type="button" class="btn btn-sm btn-outline-secondary">-</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">{{ item.quantity }}</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">+</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"  @click="addOneMore">+</button>
                         </div>
                         <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal"
                                 :data-bs-target="'#' + modalId">
@@ -75,11 +75,10 @@ export default {
     methods: {
         remove(id) {
             this.$store.dispatch('removeFromCart', id);
-            this.$store.dispatch('addNotification', "You removed an item from your cart.");
-            console.log(this.$store.state)
+            this.$store.dispatch('addNotification', "Вы удалили товар из своей корзины.");
         },
-        addNotify(desc) {
-            this.$store.dispatch('addNotification', desc);
+        addOneMore() {
+            this.item.quantity++;
         }
     }
 }

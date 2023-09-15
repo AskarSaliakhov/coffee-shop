@@ -34,7 +34,7 @@ export default {
             type: Object,
             default: {
                 limit: -1,
-                name: '',
+                    name: '',
                 type: '',
                 priceMin: 0,
                 priceMax: 99,

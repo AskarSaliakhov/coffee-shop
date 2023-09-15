@@ -124,10 +124,10 @@ export default {
     beforeCreate() {
         if (!this.$store.getters.getToken) {
             this.$router.push('/login');
-            this.$store.dispatch('addNotification', 'Please login to continue!');
+            this.$store.dispatch('addNotification', 'Пожалуйста, войдите в систему, чтобы продолжить!');
         } else if (this.$store.getters.getCart.length === 0) {
             this.$router.push('/products');
-            this.$store.dispatch('addNotification', 'Your cart is empty!');
+            this.$store.dispatch('addNotification', 'Ваша корзина пуста!');
         }
     },
     mounted() {
@@ -150,13 +150,13 @@ export default {
             })
                 .then(res => {
                     console.log(res);
-                    this.$store.dispatch('addNotification', 'Order placed successfully.');
+                    this.$store.dispatch('addNotification', 'Заказ размещен успешно.');
                     this.$store.dispatch('resetCart');
                     this.$router.push('/receipt/' + res.data._id);
                 })
                 .catch(err => {
                     console.log(err);
-                    this.$store.dispatch('addNotification', 'Order failed.');
+                    this.$store.dispatch('addNotification', 'Заказ не выполнен.');
                 })
         },
         calculateTotal() {

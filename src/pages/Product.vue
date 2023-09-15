@@ -127,7 +127,6 @@ export default {
     methods: {
         toggleType(item) {
             this.currentType = item;
-            console.log(this.currentType)
         },
         toggleOptions(item) {
             if (this.currentOptions.includes(item)) {

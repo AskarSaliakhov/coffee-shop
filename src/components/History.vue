@@ -90,7 +90,7 @@ export default {
             })
             .catch(err => {
                 console.log(err);
-                this.$store.dispatch('addNotification', "Loading orders error: " + err.message);
+                this.$store.dispatch('addNotification', "Ошибка при загрузке заказов: " + err.message);
             })
     },
     computed: {

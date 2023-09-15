@@ -14,7 +14,7 @@
             <div class="col-md-4">
                 <div class="card mb-3 sticky-top summary">
                     <div class="card-body">
-                        <h5 class="card-title">Общая стоимость</h5>
+                        <h5 class="card-title">Информация </h5>
                         <ul class="list-group list-group-flush my-3">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Общая стоимость
@@ -63,7 +63,6 @@ export default {
     },
     created() {
         this.cart = this.$store.getters.getCart;
-        console.log(this.cart)
         this.calculateTotal();
     },
     methods: {
