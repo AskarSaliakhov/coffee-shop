@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-4">
-                    <h4>Coffee King and Tea Lead</h4>
+                    <h4>The Coffee king & Tea Leadо</h4>
                     <p>С 2019 года это торговая марка ирландской компании Super Magnificent Coffee Company Ireland Limited, которая сама является дочерней компанией многонациональной корпорации Jollibee Foods Corporation.</p>
                 </div>
                 <div class="col-md-4">
