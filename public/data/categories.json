@@ -2,19 +2,19 @@
   {
     "id": 1,
     "img": "/images/cat1.jpg",
-    "title": "COFFEE",
-    "cat": "coffee"
+    "title": "КОФЕ",
+    "cat": "кофе"
   },
   {
     "id": 2,
     "img": "/images/cat2.jpg",
-    "title": "JUICE TEA",
-    "cat": "tea"
+    "title": "Чай с соком",
+    "cat": "чай"
   },
   {
     "id": 3,
     "img": "/images/cat3.jpg",
-    "title": "MILK TEA",
-    "cat": "milk-tea"
+    "title": "Чай с молоком",
+    "cat": "чай с молоком"
   }
 ]

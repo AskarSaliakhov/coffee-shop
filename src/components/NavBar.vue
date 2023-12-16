@@ -8,7 +8,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <router-link to="/" class="nav-link" aria-current="page">ГЛАВНАЯ</router-link>
+                    <router-link to="/" class="nav-link"  aria-current="page">ГЛАВНАЯ</router-link>
                     <router-link to="/products" class="nav-link">ПРОДУКТЫ</router-link>
                     <router-link to="/" class="nav-link">НОВОСТИ</router-link>
                 </div>
