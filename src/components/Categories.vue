@@ -38,9 +38,6 @@ export default {
             .then(data => {
                 this.categories = data
             })
-        console.log(1)
-        console.log(this.categories)
-        console.log(2)
     }
 }
 </script>

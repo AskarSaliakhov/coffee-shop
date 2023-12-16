@@ -1,20 +1,40 @@
+<script setup>
+import NavBar from './components/NavBar.vue';
+import Footer from './components/Footer.vue';
+import Notifications from './components/Notifications.vue';
+</script>
+
 <template>
-    <Navbar/>
-    <Slider/>
-    <NewsLetter/>
-    <Footer/>
-    <Categories/>
+    <NavBar />
+    <router-view />
+    <Footer />
+    <Notifications />
 </template>
+
 <script>
-import Footer from './components/Footer.vue'
-import Slider from "./components/Slider.vue";
-import Navbar from "./components/NavBar.vue";
-import NewsLetter from "./components/NewsLetter.vue";
-import Categories from "./components/Categories.vue";
+import { userRequest } from './requestMethod.js';
 
 export default {
-    components: {Categories, NewsLetter, Navbar, Slider, Footer}
+    beforeCreate() {
+        this.$store.dispatch('loadProducts');
+
+        this.$store.dispatch('resetNotifications');
+    },
+    mounted() {
+
+        let token = this.$store.getters.getToken;
+        if(token === null || token === undefined) return;
+
+        userRequest(token).get('/auth/test')
+            .catch(err => {
+                console.log(err);
+                this.$store.dispatch('addNotification', "Invalid Token");
+                this.$store.dispatch('logout');
+                this.$router.push('/login');
+            })
+    }
 }
 </script>
-<style>
+
+<style scoped>
 </style>
