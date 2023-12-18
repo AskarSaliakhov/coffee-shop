@@ -8,7 +8,10 @@
                 <div class="col-md-12 mb-2">
                     <h3 class="fw-bold">Популярные продукты</h3>
                 </div>
-                <BarChart v-if="!products.isLoading" :products="products.data"/>
+                <BarChart
+                    v-if="!products.isLoading"
+                    :products="products.data"
+                />
                 <Products :filter="{limit:5}" />
             </div>
         </section>

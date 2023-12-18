@@ -6,10 +6,10 @@
                 <p>Подписавшись на нас, Вы будете получать e-mail рассылку</p>
             </div>
             <div class="col-md-6 offset-md-3">
-                <form action="">
+                <form>
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Введите вашу почту">
-                        <button class="btn btn-primary">ПОДПИСАТЬСЯ</button>
+                        <button  class="btn btn-primary">ПОДПИСАТЬСЯ</button>
                     </div>
                 </form>
             </div>

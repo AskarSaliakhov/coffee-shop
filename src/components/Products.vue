@@ -1,6 +1,6 @@
 <template>
     <Spinner v-if="products.isLoading"/>
-    <p v-if="getItems.length === 0">No products found.</p>
+    <p v-if="getItems.length === 0">Нет товаров.</p>
     <Product
         v-else
         v-for="product in getItems"
@@ -15,8 +15,8 @@
         :page-range="3"
         :margin-pages="2"
         :click-handler="clickCallback"
-        :prev-text="'Prev'"
-        :next-text="'Next'"
+        :prev-text="'Пред'"
+        :next-text="'След'"
         :container-class="'pagination'"
         :page-class="'page-item'"
     />

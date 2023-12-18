@@ -5,14 +5,14 @@ import Notifications from './components/Notifications.vue';
 </script>
 
 <template>
-    <NavBar />
-    <router-view />
-    <Footer />
-    <Notifications />
+    <NavBar/>
+    <router-view/>
+    <Footer/>
+    <Notifications/>
 </template>
 
 <script>
-import { userRequest } from './requestMethod.js';
+import {userRequest} from './requestMethod.js';
 
 export default {
     beforeCreate() {
@@ -21,11 +21,13 @@ export default {
         this.$store.dispatch('resetNotifications');
     },
     mounted() {
-
         let token = this.$store.getters.getToken;
-        if(token === null || token === undefined) return;
+        if (token === null || token === undefined) return;
 
         userRequest(token).get('/auth/test')
+            .then(res => {
+                console.log(res.data);
+            })
             .catch(err => {
                 console.log(err);
                 this.$store.dispatch('addNotification', "Invalid Token");

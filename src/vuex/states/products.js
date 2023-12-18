@@ -45,7 +45,6 @@ const getters = {
         return state.data.length
     }
 }
-
 export default {
     state,
     mutations,
